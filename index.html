@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Guide</title>
+    <link rel="stylesheet" href="common/css/common.css">
+    <script src="common/js/jquery-3.3.1.min.js"></script>
+    <script src="common/js/guide.js"></script>
+    <script src="common/js/table.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 소메뉴 인스턴스 생성
+            var menu = new Btn(".container");
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1>Markup Guide</h1>
+            <nav class="gnb">
+                <ul>
+                    <li class="on"><a href="#">HTML 가이드(PC)</a></li>
+                    <li><a href="#">HTML 가이드(Mobile)</a></li>
+                    <li><a href="#">리스트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <aside class="lnb">
+                <h2>HTML 가이드</h2>
+                <nav>
+                    <ul class="btn">
+                        <li class="on"><a href="#">기본규칙</a></li>
+                        <li><a href="#">title/text/list</a></li>
+                        <li><a href="#">button</a></li>
+                        <li><a href="#">form</a></li>
+                        <li><a href="#">table</a></li>
+                        <li><a href="#">tab/step</a></li>
+                        <li><a href="#">box</a></li>
+                        <li><a href="#">borad</a></li>
+                        <li><a href="#">pattern</a></li>
+                        <li><a href="#">layout</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <section class="content">
+                <article class="on">
+                    <h3 class="guideTit">기본규칙</h3>
+                    <dl>
+                        <dt>적용 대상 브라우저</dt>
+                        <dd>최신 브라우저를 기준으로 가이드를 잡으며 IE8의 경우 화면이 틀어지거나 깨지지 않을 정도로 적용한다.</dd>
+                        <dd>
+                            <ul class="listType01">
+                                <li>Chrome</li>
+                                <li>Firefox</li>
+                                <li>Safari</li>
+                                <li>IE8,9,10,11,Edge</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>HTML 문서 작성 기본 규칙</dt>
+                        <dd>
+                            <ul class="listType01">
+                                <li>DTD : HTML5</li>
+                                <li>인코딩 : utf-8</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>HTML 기본 규칙</dt>
+                        <dd>
+                            <ul class="listType01">
+                                <li>특수문자는 Entity Code를 사용한다.</li>
+                                <li>label이 없는 input, select는 title 속성을 넣는다.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>CSS 기본 규칙</dt>
+                        <dd>
+                            <ul class="listType01">
+                                <li>모든 속성은 영문 소문자로만 작성하며 카멜 기법을 사용한다.</li>
+                                <li>@charset 선언시에만 큰따옴표("")를 사용하고 그외의 속성 파라미터값에는 작은 따옴표('')를 사용한다.</li>
+                                <li>background의 url 속성의 파라미터값에는 따옴표를 사용하지 않는다.</li>
+                                <li>마지막 속성의 세미콜론(;)은 삭제한다.</li>
+                                <li>css 코드는 작성할때는 들여쓰기를 하지 않는다.</li>
+                                <li>속성간에는 공백, 줄내림을 하지 않으며 모든 속성을 붙여쓰기 한다. 단, scrollbars, CSS3에서 배경그라데이션 색상과 같이 하나의 속성을 여러개의 핵을 써야할 경우에는 허용한다.</li>
+                                <li>중괄호 좌우 공백은 제거한다.</li>
+                                <li>의미있는 객체를 구분하기 위한 빈 줄은 한줄을 초과하지 않게 한다.</li>
+                                <li>약식 속성을 이용하되 속성값이 하나만 있는 경우는 약식 속성을 이용하지 않는다.</li>
+                                <li>최적화를 위해 '0'뒤의 단위는 생략한다.</li>
+                                <li>반복되는 색상값은 축약해서 사용한다.(#555555 -> #555)</li> 
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>CSS 속성 선언 순서</dt>
+                        <dd>박스모델을 기준으로 바깥에서 안쪽 순서대로 선언한다.</dd>
+                        <dd>
+                            <ul class="listType01">
+                                <li>display, zoom</li>
+                                <li>overflow</li>
+                                <li>float</li>
+                                <li>position, top, left, right, bottom, z-index</li>
+                                <li>margin, border, padding</li>
+                                <li>width, height</li>
+                                <li>text-align, vertical-align, text-decoration, text-indent</li>
+                                <li>font, letter-spacing, white-space, color</li>
+                                <li>background</li>
+                                <li>기타(위에 언급하지 않은 나머지 속성들)</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>Entity Code</dt>
+                        <dd>
+                            <table class="tbl">
+                                <caption>Entity Code</caption>
+                                <colgroup>
+                                    <col span="10" style="width:10%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">&amp;</th>
+                                        <td>&amp;amp;</td>
+                                        <th scope="row">&lt;</th>
+                                        <td>&amp;lt;</td>
+                                        <th scope="row">&gt;</th>
+                                        <td>&amp;gt;</td>
+                                        <th scope="row">&middot;</th>
+                                        <td>&amp;middot;</td>
+                                        <th scope="row">space</th>
+                                        <td>&amp;nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </dd>
+                        <dd>
+                            <p class="listType01"><a class="linkTxt" href="https://www.toptal.com/designers/htmlarrows/" title="새창 열림" target="_blank">Entity Code 참조 사이트</a></p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>단위</dt>
+                        <dd>px을 사용한다.</dd>
+                    </dl>
+                    <dl>
+                        <dt>z-index</dt>
+                        <dd>z-index 값은 최소 10부터 시작하며 최고 9999이며, 10 단위로 증감한다.<br />단, 중간에 변수가 생기면 예외로 1단위 값을 지정할 수 있다.</dd>
+                    </dl>
+                    <dl>
+                        <dt>폴더 구조</dt>
+                        <dd>
+                            <table class="tbl">
+                                <caption>Entity Code</caption>
+                                <colgroup>
+                                    <col span="10" style="width:10%" />
+                                </colgroup>
+                                <tbody>            
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>css 파일명</dt>
+                        <dd>기본적으로 common.css는 공통으로 사용되며, 메뉴별 css를 가져간다.</dd>
+                    </dl>
+                    <dl>
+                        <dt>이미지 파일명 규칙</dt>
+                        <dd>
+                            <table class="tbl">
+                                <caption>Entity Code</caption>
+                                <colgroup>
+                                    <col span="6" style="width:16.6%" />
+                                </colgroup>
+                                <tbody>            
+                                    <tr>
+                                        <th scope="row">텍스트형태</th>
+                                        <td>txt_*</td>
+                                        <th scope="row">버튼형태</th>
+                                        <td>btn_*</td>
+                                        <th scope="row">배경이미지</th>
+                                        <td>bg_*</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">이미지</th>
+                                        <td>img_*</td>
+                                        <th scope="row">아이콘</th>
+                                        <td>ico_*</td>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </dd>
+                    </dl>
+                </article>
+                <article>
+                    <h3 class="guideTit">title/text/list</h3>
+                    <dl>
+                        <dt>타이틀</dt>
+                        <dd>
+                            <ul class="listType01">
+                                <li>heading 태그는 순서대로 사용, hidden으로 넣는 타이틀 포함한다.</li>
+                                <li>탭/스탭 아래 필수로 hidden 타이틀 넣어야 한다.</li>
+                            </ul>
+                        </dd>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <h1 class="titDep1">페이지 타이틀</h1>
+                            </div>
+                        </dd>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <h2 class="titDep2">2Depth 타이틀</h2>
+                            </div>
+                        </dd>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <h3 class="titDep3">3Depth 타이틀</h3>
+                            </div>
+                        </dd>
+                        <dd>
+                            <p class="listType01">추가 정보가 있는 타이틀일 경우</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="txtArea">
+                                    <h2 class="titDep2">2Depth 타이틀</h2>
+                                    <div class="subTxt">2018-12-25</div>
+                                </div>
+                                <div class="txtArea">
+                                    <h2 class="titDep2">2Depth 타이틀</h2>
+                                    <div class="btnSide">
+                                        <a href="#" class="btnS">확인</a>
+                                        <a href="#" class="btnS">취소</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>텍스트</dt>
+                        <dd>
+                            <p class="listType01">색상의 경우 blue, red 클래스를 추가한다.(important)</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <p>안녕하세요 반갑습니다람쥐 안녕하세요 반갑습니다람쥐</p>
+                                <p class="blue">안녕하세요 반갑습니다람쥐 안녕하세요 반갑습니다람쥐</p>
+                                <p class="red">안녕하세요 반갑습니다람쥐 안녕하세요 반갑습니다람쥐</p>
+                            </div>
+                        </dd>
+                        <dd>
+                            <p class="listType01">링크 텍스트인 경우 하단에 밑줄이 추가된다.</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <a href="#" class="linkTxt">안녕하세요 반갑습니다람쥐 안녕하세요 반갑습니다람쥐</a><br />
+                                <a href="#" class="linkTxtBule">안녕하세요 반갑습니다람쥐 안녕하세요 반갑습니다람쥐</a><br />
+                                <a href="#" class="linkTxtRed">안녕하세요 반갑습니다람쥐 안녕하세요 반갑습니다람쥐</a>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>정의(Definition)</dt>
+                        <dd>
+                            <p class="listType01">한줄 일 경우</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <p class="caution">참고 문구 입니다 안녕하세요 반갑습니다</p>
+                            </div>
+                            <p class="listType01">두줄 이상일 경</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <ul class="caution">
+                                    <li>참고 문구 입니다 안녕하세요 반갑습니다</li>
+                                    <li>참고 문구 입니다 안녕하세요 반갑습니다
+                                        <ul class="caution">
+                                            <li>참고 문구 입니다 안녕하세요 반갑습니다</li>
+                                            <li>참고 문구 입니다 안녕하세요 반갑습니다 
+                                                <ul class="caution">
+                                                    <li>참고 문구 입니다 안녕하세요 반갑습니다</li>
+                                                    <li>참고 문구 입니다 안녕하세요 반갑습니다 </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>순서가 없는 리스트</dt>
+                        <dd>
+                            <p class="listType01">한줄 일 경우</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <p class="listType01">리스트 입니다 리스트 입니다 리스트 입니다 리스트 입니다 리스트 입니다</p>
+                            </div>
+                            <p class="listType01">두줄 이상일 경우</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <ul class="listType01">
+                                    <li>참고 문구 입니다 안녕하세요 반갑습니다</li>
+                                    <li>참고 문구 입니다 안녕하세요 반갑습니다
+                                        <ul class="listType01">
+                                            <li>참고 문구 입니다 안녕하세요 반갑습니다</li>
+                                            <li>참고 문구 입니다 안녕하세요 반갑습니다 
+                                                <ul class="listType01">
+                                                    <li>참고 문구 입니다 안녕하세요 반갑습니다</li>
+                                                    <li>참고 문구 입니다 안녕하세요 반갑습니다 </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>순서가 있는 리스트</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <ol class="listNum01">
+                                        <li>참고 문구 입니다 안녕하세요 반갑습니다</li>
+                                        <li>참고 문구 입니다 안녕하세요 반갑습니다</li>
+                                    <li>참고 문구 입니다 안녕하세요 반갑습니다
+                                        <ol class="listNum01">
+                                            <li>참고 문구 입니다 안녕하세요 반갑습니다</li>
+                                            <li>참고 문구 입니다 안녕하세요 반갑습니다 
+                                                <ol class="listNum01">
+                                                    <li>참고 문구 입니다 안녕하세요 반갑습니다</li>
+                                                    <li>참고 문구 입니다 안녕하세요 반갑습니다 </li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+                        </dd>
+                    </dl>
+                </article>
+                <article>
+                    <h3 class="guideTit">button</h3>
+                    <dl>
+                        <dt>버튼 규칙</dt>
+                        <dd>
+                            <ul class="listType01">
+                                <li>버튼은 용도에 맞게 기능성 버튼은 button 태그를, 링크는 a태그를 사용한다.</li>
+                                <li>새창 및 윈도우팝업의 경우 title="새창열림" target="_blank" 를 필수로 넣어준다.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>large Button(height:40px)</dt>
+                        <dd>
+                            <p class="listType01">button</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="btnArea">
+                                    <button type="button" class="btnL action">확인</button>
+                                    <button type="button" class="btnL">취소</button>
+                                    <button type="button" class="btnL btnInq">조회</button>
+                                    <button type="button" class="btnL btnIco btnSearch">자세히 보기</button>
+                                    <button type="button" class="btnL btnIco btnReset">정정</button>
+                                    <button type="button" class="btnL btnIco btnDown">다운로드</button>
+                                </div>
+                                <div class="btnArea">
+                                    <button type="button" class="btnL btnIco btnLike">좋아요</button>
+                                    <button type="button" class="btnL btnIco btnCart">장바구니</button>
+                                    <button type="button" class="btnL btnIco btnList">목록</button>
+                                    <button type="button" class="btnL btnIco btnStar"><span classs="hidden">중요</span></button>
+                                    <button type="button" class="btnL btnIco btnPrev">이전</button>
+                                </div>
+                            </div>
+                            <p class="listType01">link</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <a href="#" class="btnL action">확인</a>
+                                <a href="#" class="btnL">취소</a>
+                                <a href="#" class="btnL btnIco btnSearch">자세히 보기</a>
+                                <a href="#" class="btnL btnIco btnReset">정정</a>
+                                <a href="#" class="btnL btnIco btnDown">다운로드</a>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>medium Button(height:35px)</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="btnArea">
+                                    <button type="button" class="btnM btnIco btnSearch">자세히 보기</button>
+                                    <button type="button" class="btnM btnIco btnReset">정정</button>
+                                    <button type="button" class="btnM btnIco btnDown">다운로드</button>
+                                    <button type="button" class="btnM btnIco btnLike">좋아요</button>
+                                    <button type="button" class="btnM btnIco btnCart">장바구니</button>
+                                    <button type="button" class="btnM btnIco btnList">목록</button>
+                                    <button type="button" class="btnM btnIco btnStar"><span classs="hidden">중요</span></button>
+                                    <button type="button" class="btnM btnIco btnPrev">이전</button>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>small Button(height:25px)</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="btnArea">
+                                    <button type="button" class="btnS btnIco btnSearch">자세히 보기</button>
+                                    <button type="button" class="btnS btnIco btnReset">정정</button>
+                                    <button type="button" class="btnS btnIco btnDown">다운로드</button>
+                                    <button type="button" class="btnS btnIco btnLike">좋아요</button>
+                                    <button type="button" class="btnS btnIco btnCart">장바구니</button>
+                                    <button type="button" class="btnS btnIco btnList">목록</button>
+                                    <button type="button" class="btnS btnIco btnStar"><span classs="hidden">중요</span></button>
+                                    <button type="button" class="btnS btnIco btnPrev">이전</button>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>icon Button</dt>
+                        <dd>
+                            <p class="listType01">이미지만 있는경우 span 태그에 hidden 클래스를 사용한다.</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="btnArea">
+                                    <button type="button" class="btnM btnIco btnSearch">자세히 보기</button>
+                                    <button type="button" class="btnM btnIco btnReset">정정</button>
+                                    <button type="button" class="btnM btnIco btnDown">다운로드</button>
+                                    <button type="button" class="btnM btnIco btnLike">좋아요</button>
+                                    <button type="button" class="btnM btnIco btnCart">장바구니</button>
+                                    <button type="button" class="btnM btnIco btnList">목록</button>
+                                    <button type="button" class="btnM btnIco btnStar">중요</button>
+                                    <button type="button" class="btnM btnIco btnPrev">이전</button>
+                                    <button type="button" class="btnM btnIco confirm">확인</button>
+                                    <button type="button" class="btnM btnIco compare">비교하기</button>
+                                    <button type="button" class="btnM btnIco card">카드뷰 보기</button>
+                                    <button type="button" class="btnM btnIco list">리스트 보기</button>
+                                    <button type="button" class="btnM btnIco add">더보기</button>
+                                    <button type="button" class="btnM btnIco cross"><span class="hidden">취소</span></button>
+                                    <button type="button" class="btnM btnIco close"><span class="hidden">닫기</span></button>
+                                    <button type="button" class="btnM btnIco write"><span class="hidden">글쓰기</span></button>
+                                    <button type="button" class="btnM btnIco print"><span class="hidden">인쇄하기</span></button>
+                                    <button type="button" class="btnM btnIco paper">문서보기</button>
+                                    <button type="button" class="btnM btnIco pdf">PDF 다운로드</button>
+                                    <button type="button" class="btnM btnIco excel">엑셀 다운로드</button>
+                                    <button type="button" class="btnM btnIco basket">버리기</button>
+                                    <button type="button" class="btnM btnIco calendar">달력</button>
+                                    <button type="button" class="btnM btnIco screen">화면보기</button>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>form button</dt>
+                        <dd>
+                            <p class="listType01">이미지만 있는경우 span 태그에 hidden 클래스를 사용한다.</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="btnArea">
+                                    <p class="formBtn">
+                                        <input type="radio" name="radio01" id="radio01_01" />
+                                        <label for="radio01_01">당일</label>
+                                    </p>
+                                    <p class="formBtn">
+                                        <input type="radio" name="radio01" id="radio01_02" />
+                                        <label for="radio01_02">1주일</label>
+                                    </p>
+                                    <p class="formBtn">
+                                        <input type="radio" name="radio01" id="radio01_03" />
+                                        <label for="radio01_03">2주일</label>
+                                    </p>
+                                    <p class="formBtn">
+                                        <input type="radio" name="radio01" id="radio01_04" />
+                                        <label for="radio01_04">3주일</label>
+                                    </p>
+                                    <p class="formBtn">
+                                        <input type="radio" name="radio01" id="radio01_05" />
+                                        <label for="radio01_05">설정이후</label>
+                                    </p>
+                                </div>
+                                <div class="btnArea">
+                                    <p class="formBtn">
+                                        <input type="checkbox" id="checkbox01_01" />
+                                        <label for="checkbox01_01">체크박스</label>
+                                    </p>
+                                    <p class="formBtn">
+                                        <input type="checkbox" id="checkbox01_02" />
+                                        <label for="checkbox01_02">체크박스</label>
+                                    </p>
+                                    <p class="formBtn">
+                                        <input type="checkbox" id="checkbox01_03" />
+                                        <label for="checkbox01_03">체크박스</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </article>
+                <article>
+                    <h3 class="guideTit">form</h3>
+                    <dl>
+                        <dt>폼 규칙</dt>
+                        <dd>
+                            <ul class="listType01">
+                                <li>input type="text"의 넑이는 inline으로 지정한다.</li>
+                                <li>checkbox, radio의 id,/for 값은 꼭 변경해서 사용한다.</li>
+                                <li>lable이 없을 경우 title을 꼭 넣어준다.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>input</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="formArea">
+                                    <input type="text" />
+                                    <input type="text" placeholder="텍스트 입력" />
+                                    <input type="text" class="num" value="100,000,000" />
+                                </div>
+                                <div class="formArea">
+                                    <input type="text" value="disabled(비활성화)" disabled="disabled" />
+                                    <input type="text" value="readonly(읽기전용)" readonly="readonly" />
+                                    <input type="password" placeholder="패스워드 입력" />
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>textarea</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <textarea name="" cols="30" rows="10"></textarea>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>selectbox</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="selectWrap">
+                                    <select>
+                                        <option value="" selected="selected">선택해주세요</option>
+                                        <option value="">선택해주세요</option>
+                                        <option value="">선택해주세요</option>
+                                        <option value="">선택해주세요</option>
+                                    </select>
+                                </div>
+                                <div class="selectWrap">
+                                    <select disabled="disabled">
+                                        <option value="" selected="selected">disabled(비활성화)</option>
+                                        <option value="">disabled(비활성화)</option>
+                                        <option value="">disabled(비활성화)</option>
+                                        <option value="">disabled(비활성화)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>checkbox</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="formArea">
+                                    <p class="formWrap">
+                                        <input type="checkbox" id="check01_01" />
+                                        <label for="check01_01"></label>
+                                    </p>
+                                    <p class="formWrap">
+                                        <input type="checkbox" id="check01_02" checked="checked" />
+                                        <label for="check01_02"></label>
+                                    </p>
+                                    <p class="formWrap">
+                                        <input type="checkbox" id="check01_03" disabled="disabled" />
+                                        <label for="check01_03"></label>
+                                    </p>
+                                    <p class="formWrap">
+                                        <input type="checkbox" id="check01_04" checked="checked" disabled="disabled" />
+                                        <label for="check01_04"></label>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="listType01">텍스트가 들어간 경우 txt 클래스 추가</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="formArea">
+                                    <p class="formWrap txt">
+                                        <input type="checkbox" id="check02_01" />
+                                        <label for="check02_01">체크박스</label>
+                                    </p>
+                                    <p class="formWrap txt">
+                                        <input type="checkbox" id="check02_02" checked="checked" />
+                                        <label for="check02_02">체크박스</label>
+                                    </p>
+                                    <p class="formWrap txt">
+                                        <input type="checkbox" id="check02_03" disabled="disabled" />
+                                        <label for="check02_03">체크박스</label>
+                                    </p>
+                                    <p class="formWrap txt">
+                                        <input type="checkbox" id="check02_04" checked="checked" disabled="disabled" />
+                                        <label for="check02_04">체크박스</label>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="listType01">작은 폼일 경우(width:11px, height:11px)</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="formArea">
+                                    <p class="formWrapS txt">
+                                        <input type="checkbox" id="check03_01" />
+                                        <label for="check03_01"></label>
+                                    </p>
+                                    <p class="formWrapS txt">
+                                        <input type="checkbox" id="check03_02" checked="checked" />
+                                        <label for="check03_02"></label>
+                                    </p>
+                                    <p class="formWrapS txt">
+                                        <input type="checkbox" id="check03_03" />
+                                        <label for="check03_03">체크박스</label>
+                                    </p>
+                                    <p class="formWrapS txt">
+                                        <input type="checkbox" id="check03_04" checked="checked" />
+                                        <label for="check03_04">체크박스</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>radio</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="formArea">
+                                    <p class="formWrap">
+                                        <input type="radio" name="radio02" id="radio02_01" />
+                                        <label for="radio02_01"></label>
+                                    </p>
+                                    <p class="formWrap">
+                                        <input type="radio" name="radio02" id="radio02_02" checked="checked" />
+                                        <label for="radio02_02"></label>
+                                    </p>
+                                    <p class="formWrap">
+                                        <input type="radio" name="radio02" id="radio02_03" disabled="disabled" />
+                                        <label for="radio02_03"></label>
+                                    </p>
+                                    <p class="formWrap">
+                                        <input type="radio" name="radio03" id="radio03_01" checked="checked" disabled="disabled" />
+                                        <label for="radio03_01"></label>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="listType01">텍스트가 들어간 경우 txt 클래스 추가</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="formArea">
+                                    <p class="formWrap txt">
+                                        <input type="radio" name="radio04" id="radio04_01" />
+                                        <label for="radio04_01">라디오버튼</label>
+                                    </p>
+                                    <p class="formWrap txt">
+                                        <input type="radio" name="radio04" id="radio04_02" checked="checked" />
+                                        <label for="radio04_02">라디오버튼</label>
+                                    </p>
+                                    <p class="formWrap txt">
+                                        <input type="radio" name="radio04" id="radio04_03" disabled="disabled" />
+                                        <label for="radio04_03">라디오버튼</label>
+                                    </p>
+                                    <p class="formWrap txt">
+                                        <input type="radio" name="radio05" id="radio05_01" checked="checked" disabled="disabled" />
+                                        <label for="radio05_01">라디오버튼</label>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="listType01">작은 폼일 경우(width:11px, height:11px)</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="formArea">
+                                    <p class="formWrapS txt">
+                                        <input type="radio" name="radio06" id="radio06_01" />
+                                        <label for="radio06_01"></label>
+                                    </p>
+                                    <p class="formWrapS txt">
+                                        <input type="radio" name="radio06" id="radio06_02" checked="checked" />
+                                        <label for="radio06_02"></label>
+                                    </p>
+                                    <p class="formWrapS txt">
+                                        <input type="radio" name="radio06" id="radio06_03" />
+                                        <label for="radio06_03">체크박스</label>
+                                    </p>
+                                    <p class="formWrapS txt">
+                                        <input type="radio" name="radio07" id="radio07_01" checked="checked" />
+                                        <label for="radio07_01">체크박스</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </article>
+                <article>
+                    <h3 class="guideTit">table</h3>
+                    <dl>
+                        <dt>테이블 규칙</dt>
+                        <dd>
+                            <ul class="listType01">
+                                <li>id/headers 정의가 필요한 테이블에는 tableJs 클래스를 추가한다.<br />스크립트가 id/headers값을 동적으로 추가한다.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>table</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <table class="tbl">
+                                    <caption>테이블 타이틀</caption>
+                                    <colgroup>
+                                        <col style="width:25%" span="4" />
+                                    </colgroup>
+                                    <tfoot>
+                                        <tr>
+                                            <th scope="row">합계</th>
+                                            <td>00</td>
+                                            <td>00</td>
+                                            <td>00</td>
+                                        </tr>
+                                    </tfoot>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">구분</th>
+                                            <td class="txtL">왼쪽 정렬</td>
+                                            <td class="txtR">오른쪽 정렬</td>
+                                            <td>00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">구분</th>
+                                            <td class="txtL">왼쪽 정렬</td>
+                                            <td class="txtR">오른쪽 정렬</td>
+                                            <td>00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>id/headers 정의</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <table class="tbl tableJs">
+                                    <caption>테이블 타이틀</caption>
+                                    <colgroup>
+                                        <col style="width:25%" span="4" />
+                                    </colgroup>
+                                    <tfoot>
+                                        <tr>
+                                            <th scope="row">합계</th>
+                                            <td>00</td>
+                                            <td>00</td>
+                                            <td>00</td>
+                                        </tr>
+                                    </tfoot>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">구분</th>
+                                            <td>00</td>
+                                            <td>00</td>
+                                            <td>00</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">구분</th>
+                                            <td>00</td>
+                                            <td>00</td>
+                                            <td>00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>항목이 많은 경우</dt>
+                        <dd>
+                            <p class="listType01">항목이 2줄 이상일 경우 항목이 끝나는 행의 tr태그에 group 클래스를 추가한다.</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <table class="tbl">
+                                    <caption>테이블 타이틀</caption>
+                                    <colgroup>
+                                        <col style="width:25%" span="4" />
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">구분</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="group">
+                                            <td class="txtL">왼쪽 정렬</td>
+                                            <td class="txtR">오른쪽 정렬</td>
+                                            <td>00</td>
+                                            <td>00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtL">왼쪽 정렬</td>
+                                            <td class="txtR">오른쪽 정렬</td>
+                                            <td>00</td>
+                                            <td>00</td>
+                                        </tr>
+                                        <tr class="group">
+                                            <td class="txtL">왼쪽 정렬</td>
+                                            <td class="txtR">오른쪽 정렬</td>
+                                            <td>00</td>
+                                            <td>00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtL">왼쪽 정렬</td>
+                                            <td class="txtR">오른쪽 정렬</td>
+                                            <td>00</td>
+                                            <td>00</td>
+                                        </tr>
+                                        <tr class="group">
+                                            <td class="txtL">왼쪽 정렬</td>
+                                            <td class="txtR">오른쪽 정렬</td>
+                                            <td>00</td>
+                                            <td>00</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="txtL">왼쪽 정렬</td>
+                                            <td class="txtR">오른쪽 정렬</td>
+                                            <td>00</td>
+                                            <td>00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>form table</dt>
+                        <dd>
+                            <p class="listType01">테이블의 행이 합쳐진 경우 왼쪽 선이 안보일 때 lineL 클래스를 추가 한다.</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <table class="tblForm">
+                                    <caption>테이블 타이틀</caption>
+                                    <colgroup>
+                                        <col style="width:100px" span="2" />
+                                        <col style="width:auto" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" colspan="2">타이틀<span class="ness">*</span></th>
+                                            <td >
+                                                <input type="text">
+                                                <input type="text" placeholder="텍스트 입력">
+                                                <input type="text" class="num" value="100,000,000">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" rowspan="2">타이틀<span class="ness">*</span></th>
+                                            <th scope="row">타이틀</th>
+                                            <td >
+                                                <div class="selectWrap">
+                                                    <select>
+                                                        <option value="" selected="selected">선택해주세요</option>
+                                                        <option value="">선택해주세요</option>
+                                                        <option value="">선택해주세요</option>
+                                                        <option value="">선택해주세요</option>
+                                                    </select>
+                                                </div>
+                                                <p class="infoTxt">부가 설명을 적어주세요.</p>
+                                                <div class="btnArea">
+                                                    <button type="button" class="btnM btnIco btnSearch">자세히 보기</button>
+                                                    <button type="button" class="btnM btnIco btnReset">정정</button>
+                                                    <button type="button" class="btnM btnIco btnDown">다운로드</button>
+                                                    <button type="button" class="btnM btnIco btnLike">좋아요</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="lineL">lineL 클래스 추가</th>
+                                            <td >
+                                                <div class="formArea">
+                                                    <p class="formWrap txt">
+                                                        <input type="checkbox" id="check04_01">
+                                                        <label for="check04_01">체크박스</label>
+                                                    </p>
+                                                    <p class="formWrap txt">
+                                                        <input type="checkbox" id="check04_02">
+                                                        <label for="check04_02">체크박스</label>
+                                                    </p>
+                                                    <p class="formWrap txt">
+                                                        <input type="checkbox" id="check04_03">
+                                                        <label for="check04_03">체크박스</label>
+                                                    </p>
+                                                    <p class="formWrap txt">
+                                                        <input type="checkbox" id="check04_04">
+                                                        <label for="check04_04">체크박스</label>
+                                                    </p>
+                                                </div>
+                                                <div class="selectWrap">
+                                                    <select>
+                                                        <option value="" selected="selected">선택해주세요</option>
+                                                        <option value="">선택해주세요</option>
+                                                        <option value="">선택해주세요</option>
+                                                        <option value="">선택해주세요</option>
+                                                    </select>
+                                                </div>
+                                                <div class="selectWrap">
+                                                    <select>
+                                                        <option value="" selected="selected">선택해주세요</option>
+                                                        <option value="">선택해주세요</option>
+                                                        <option value="">선택해주세요</option>
+                                                        <option value="">선택해주세요</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>scroll table</dt>
+                        <dd>
+                            <p class="listType01">테이블을 div로 한번 감싸며, tblScroll 클래스를 추가한다.</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="tblScroll">
+                                    <table class="tbl">
+                                        <caption>테이블 타이틀</caption>
+                                        <colgroup>
+                                            <col style="width:25%" span="4" />
+                                        </colgroup>
+                                        <tfoot>
+                                            <tr>
+                                                <th scope="row">합계</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                        </tfoot>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">구분</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>scroll table(테이블 헤드 분리형)</dt>
+                        <dd>
+                            <p class="listType01">테이블 열 간격 단위는 px로 입력하며, 마지막 열 간격은 스크롤 넓이(17px)만큼 빼준다.<br />분리된 헤드테이블에는 caption를 작성하지 않는다.</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <table class="tbl">
+                                    <colgroup>
+                                        <col style="width:auto" />
+                                        <col style="width:200px" />
+                                        <col style="width:200px" />
+                                        <col style="width:200px" />
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">구분</th>
+                                        <th scope="col">구분</th>
+                                    </tr>
+                                    </thead>
+                                </table>
+                                <div class="tblScrollFixed">
+                                    <table class="tbl">
+                                        <caption>테이블 타이틀</caption>
+                                        <colgroup>
+                                            <col style="width:auto" />
+                                            <col style="width:200px" />
+                                            <col style="width:200px" />
+                                            <col style="width:183px" />
+                                        </colgroup>
+                                        <tfoot>
+                                            <tr>
+                                                <th scope="row">합계</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                        </tfoot>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">구분</th>
+                                                <th scope="col">구분</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <td>00</td>
+                                                <td>00</td>
+                                                <td>00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </article>
+                <article>
+                    <h3 class="guideTit">tab/step</h3>
+                    <dl>
+                        <dt>기본 탭(1Depth)</dt>
+                        <dd>
+                            <ul class="listType01">
+                                <li>탭 갯수 5개 미만일때</li>
+                                <li>탭 타이틀은 하단에 꼭 hidden 처리를 해준다.</li>
+                            </ul>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <ul class="tabType01">
+                                    <li class="on"><a href="#">첫번째 탭</a></li>
+                                    <li><a href="#">두번째 탭<br />탭탭탭</a></li>
+                                    <li><a href="#">세번째 탭</a></li>
+                                    <li><a href="#">네번째 탭</a></li>
+                                    <li><a href="#">다섯번째 탭</a></li>
+                                </ul>
+                                <h3 class="hidden">첫번째 탭</h3>
+                                <br />
+                                <br />
+                                <ul class="tabType01">
+                                    <li><a href="#">첫번째 탭</a></li>
+                                    <li><a href="#">두번째 탭<br />탭탭탭</a></li>
+                                    <li><a href="#">세번째 탭</a></li>
+                                    <li><a href="#">네번째 탭</a></li>
+                                    <li class="on"><a href="#">다섯번째 탭</a></li>
+                                </ul>
+                                <h3 class="hidden">다섯번째 탭</h3>
+                            </div>
+                            <p class="listType01">탭 텍스트가 많을때</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <ul class="tabType01 type02">
+                                    <li class="on"><a href="#">첫번째 탭</a></li>
+                                    <li><a href="#">두번째 탭<br />탭탭탭</a></li>
+                                    <li><a href="#">세번째 탭</a></li>
+                                    <li><a href="#">네번째 탭<br />탭탭탭</a></li>
+                                    <li><a href="#">첫번째 탭</a></li>
+                                    <li><a href="#">두번째 탭<br />탭탭탭</a></li>
+                                    <li><a href="#">세번째 탭</a></li>
+                                </ul>
+                                <h3 class="hidden">첫번째 탭</h3>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>기본 탭(2Depth)</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <ul class="tabType02">
+                                    <li class="on"><a href="#">첫번째 탭</a></li>
+                                    <li><a href="#">두번째 탭</a></li>
+                                    <li><a href="#">세번째 탭</a></li>
+                                    <li><a href="#">네번째 탭</a></li>
+                                    <li><a href="#">다섯번째 탭</a></li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>그리드 탭</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <ul class="tabGrid">
+                                    <li class="on"><a href="#">첫번째 탭</a></li>
+                                    <li><a href="#">두번째 탭</a></li>
+                                    <li><a href="#">세번째 탭</a></li>
+                                    <li class="on"><a href="#">네번째 탭<br />네번째 탭</a></li>
+                                    <li><a href="#">다섯번째 탭</a></li>
+                                    <li><a href="#">첫번째 탭</a></li>
+                                    <li><a href="#">두번째 탭<br />네번째 탭</a></li>
+                                    <li><a href="#">세번째 탭<br />네번째 탭</a></li>
+                                    <li><a href="#">네번째 탭</a></li>
+                                    <li><a href="#">다섯번째 탭</a></li>
+                                    <li class="on"><a href="#">첫번째 탭</a></li>
+                                    <li><a href="#">두번째 탭</a></li>
+                                    <li><a href="#">세번째 탭</a></li>
+                                    <li><a href="#">네번째 탭<br />네번째 탭</a></li>
+                                    <li><a href="#">세번째 탭</a></li>
+                                    <li><a href="#">네번째 탭</a></li>
+                                    <li class="on"><a href="#">다섯번째 탭</a></li>
+                                </ul>
+                            </div>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <ul class="tabGrid type02">
+                                    <li class="on"><a href="#">첫번째 탭</a></li>
+                                    <li><a href="#">두번째 탭</a></li>
+                                    <li><a href="#">세번째 탭</a></li>
+                                    <li class="on"><a href="#">네번째 탭<br />네번째 탭</a></li>
+                                    <li><a href="#">다섯번째 탭</a></li>
+                                    <li><a href="#">첫번째 탭</a></li>
+                                    <li><a href="#">두번째 탭<br />네번째 탭</a></li>
+                                    <li><a href="#">세번째 탭<br />네번째 탭</a></li>
+                                    <li><a href="#">네번째 탭</a></li>
+                                    <li><a href="#">다섯번째 탭</a></li>
+                                    <li class="on"><a href="#">첫번째 탭</a></li>
+                                    <li><a href="#">두번째 탭</a></li>
+                                    <li><a href="#">세번째 탭</a></li>
+                                    <li><a href="#">네번째 탭<br />네번째 탭</a></li>
+                                    <li><a href="#">세번째 탭</a></li>
+                                    <li><a href="#">네번째 탭</a></li>
+                                    <li class="on"><a href="#">다섯번째 탭</a></li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>스탭</dt>
+                        <dd>
+                            <p class="listType01">현재단계에는 recent 클래스 추가, 이전단계에는 prev 클래스 추가, 현재단계에는 대체 텍스트를 추가한다.</p>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <ul class="stepWrap">
+                                    <li class="recent">
+                                        <strong><span>현재</span>1</strong>
+                                        <p>계좌 입력</p>
+                                    </li>
+                                    <li>
+                                        <strong>2</strong>
+                                        <p>계좌 확인</p>
+                                    </li>
+                                    <li>
+                                        <strong>2</strong>
+                                        <p>계좌 조회</p>
+                                    </li>
+                                    <li>
+                                        <strong>4</strong>
+                                        <p>계좌 확인</p>
+                                    </li>
+                                    <li>
+                                        <strong>5</strong>
+                                        <p>계좌 조회</p>
+                                    </li>
+                                </ul>
+                                <ul class="stepWrap">
+                                    <li class="prev">
+                                        <strong><span>현재</span>1</strong>
+                                        <p>계좌 입력</p>
+                                    </li>
+                                    <li class="prev">
+                                        <strong>2</strong>
+                                        <p>계좌 확인</p>
+                                    </li>
+                                    <li class="recent">
+                                        <strong>2</strong>
+                                        <p>계좌 조회</p>
+                                    </li>
+                                    <li>
+                                        <strong>4</strong>
+                                        <p>계좌 확인</p>
+                                    </li>
+                                    <li>
+                                        <strong>5</strong>
+                                        <p>계좌 조회</p>
+                                    </li>
+                                </ul>
+                                <ul class="stepWrap">
+                                    <li class="prev">
+                                        <strong><span>현재</span>1</strong>
+                                        <p>계좌 입력</p>
+                                    </li>
+                                    <li class="prev">
+                                        <strong>2</strong>
+                                        <p>계좌 확인</p>
+                                    </li>
+                                    <li class="prev">
+                                        <strong>2</strong>
+                                        <p>계좌 조회</p>
+                                    </li>
+                                    <li class="prev">
+                                        <strong>4</strong>
+                                        <p>계좌 확인</p>
+                                    </li>
+                                    <li class="recent">
+                                        <strong>5</strong>
+                                        <p>계좌 조회</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dd>
+                    </dl>
+                </article>
+                <article>
+                    <h3 class="guideTit">box</h3>
+                    <dl>
+                        <dt>가이드 박스</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="guideBox">
+                                    <strong>GUIDE</strong>
+                                    <ul class="listType01">
+                                        <li>가이드 내용을 입력하세요.</li>
+                                        <li>가이드 내용을 입력하세요.</li>
+                                        <li>가이드 내용을 입력하세요.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>가이드 박스</dt>
+                        <dd>
+                            <p class="sampleTit">예시</p>
+                            <div class="sample">
+                                <div class="infoBox">
+                                    <strong>확인하세요</strong>
+                                    <ul class="listType01">
+                                        <li>확인 내용입니다.</li>
+                                        <li>확인 내용입니다.</li>
+                                        <li>확인 내용입니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </article>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
